@@ -29,6 +29,8 @@ weatherByLocation.addEventListener('click', () => {
         if (!navigator.geolocation) {
             return alert("Oops!")
         }
+        console.log(navigator.geolocation);
+        
 
         const longitude = position.coords.latitude
         const latitude = position.coords.longitude
