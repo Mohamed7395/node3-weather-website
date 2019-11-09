@@ -29,11 +29,6 @@ weatherByLocation.addEventListener('click', () => {
 
         const longitude = position.coords.latitude
         const latitude = position.coords.longitude
-        const msg = positionError.message
-        if (msg) {
-            console.log(msg);
-            
-        }
 
         messageOne.textContent = 'Loading...'
         messageTwo.textContent = ''
