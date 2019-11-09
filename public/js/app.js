@@ -26,14 +26,14 @@ weatherForm.addEventListener('submit', (e) => {
 
 weatherByLocation.addEventListener('click', () => {
     navigator.geolocation.getCurrentPosition((position) => {
-        if (PositionError.code) {
-            return alert("Oops!")
-        }
-        console.log(PositionError.code);
-        
 
         const longitude = position.coords.latitude
         const latitude = position.coords.longitude
+        const msg = positionError.message
+        if (msg) {
+            console.log(msg);
+            
+        }
 
         messageOne.textContent = 'Loading...'
         messageTwo.textContent = ''
